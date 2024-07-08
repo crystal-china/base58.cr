@@ -1,0 +1,9 @@
+name: base58
+version: 0.1.0
+
+authors:
+  - Billy.Zheng <vil963@gmail.com>
+
+crystal: '>= 1.12.2'
+
+license: MIT
