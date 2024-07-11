@@ -1,7 +1,7 @@
 # base58.cr
  Generate random strings with Base58 alphabet.
  
- Base58 string may contain alphanumeric characters except 0, O, I and l, it can be build use following Crystal/Ruby code.
+ Base58 string may contain alphanumeric characters except `0`, `O`, `I` and `l`, it can be build use following Crystal code.
  
 ```ruby
 ("0".."9").to_a + ("A".."Z").to_a + ("a".."z").to_a - ["0", "O", "I", "l"]
@@ -10,8 +10,8 @@
  Better performance than [valenciaj/crystal-base58](https://github.com/valenciaj/crystal-base58), thanks a lot for the discussion in the [forum](https://forum.crystal-lang.org/t/is-this-a-good-way-to-generate-a-random-string/6986)
  
 ```
-Random.base58(current shards)	33.17M ( 30.15ns) (± 3.27%)  32.0B/op        fastest
-Base58.random                   3.52M (284.24ns) (± 3.82%)   401B/op   9.43× slower
+Random.base58(base58.cr)        33.17M ( 30.15ns) (± 3.27%)  32.0B/op        fastest
+Base58.random(crystal-base58)   3.52M (284.24ns) (± 3.82%)   401B/op   9.43× slower
 ```
 
 ## Contributing
