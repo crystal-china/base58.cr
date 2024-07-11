@@ -14,6 +14,24 @@ Random.base58(base58.cr)        33.17M ( 30.15ns) (± 3.27%)  32.0B/op        fa
 Base58.random(crystal-base58)   3.52M (284.24ns) (± 3.82%)   401B/op   9.43× slower
 ```
 
+## How to use it.
+
+Add this shard into shard.yml, then run `shards install`
+
+```yaml
+dependencies:
+  base58:
+    github: crystal-china/base58.cr
+```
+
+Use it.
+
+```crystal
+require "base58"
+
+Random.base58(20)  # => bbTmPChwQAPKyUV2P9oZ
+```
+
 ## Contributing
 
 1. Fork it (<https://github.com/crystal-china/base58.cr/fork>)
