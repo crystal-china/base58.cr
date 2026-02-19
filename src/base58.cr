@@ -21,7 +21,7 @@ module Random
     # and divide until they're guaranteed to be small enough
     # (this seems to be about as fast as a right shift; the compiler probably optimizes it)
     random.random_bytes(bytes)
-    bytes.map! { |v| v % BASE58_ALPHABET.bytesize }
+    bytes.map! { |v| v % 58 }
 
     # and then use the buffer-based string constructor to set the characters
     String.new(capacity: length) do |buffer|
