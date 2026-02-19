@@ -4,8 +4,9 @@ module Random
   # Base58 string may contain alphanumeric characters except 0, O, I and l.
   #  ("0".."9").to_a + ("A".."Z").to_a + ("a".."z").to_a - ["0", "O", "I", "l"]
   BASE58_ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+  BASE58_RANDOM_SEED = Random.new
 
-  def self.base58(length : Int32 = 16, random = Random::DEFAULT) : String
+  def self.base58(length : Int32 = 16, random = BASE58_RANDOM_SEED) : String
     # Stolen from https://forum.crystal-lang.org/t/is-this-a-good-way-to-generate-a-random-string/6986/11,
     # thank a lot for these awesome discussions in this thread.
 
